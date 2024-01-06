@@ -1,0 +1,114 @@
+/* FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+/* RESET */
+*{
+    /* ESSA CONFIG. TIROU AS MARGENS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxaniun', cursive;
+}
+body{
+    /* CENTRALIZAR TUDO (FOTO E O BLOCO DE COR ATRÁS DA FOTO) */
+    text-align: center;
+    /* GRADIENTE DE CIMA P BAIXO */
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    /* ESTICAR O GRADIENTE ATÉ O FINAL DA TELA */
+    min-height: 100vh;
+
+}
+/* ESTILIZAÇÃO DO MAIN */
+main{
+    /* DEIXAR DE OCUPAR 100% DA TELA E OCUPAR SOMENTE O LUGAR ONDE ESTÁ  A FOTO */
+    display: inline-block;
+    margin-top: 2%;
+     /* QUANDO NÃO TIVER UMA TELA MUITO PEQUENA, A IMAGEM NÃO FICAR TÃO COLADA NAS LATERAIS */
+     padding: 15px;
+     position: relative;
+}
+/* ESTILIZAÇÃO DA IMAGEM */
+.pokedex{
+    /* OCUPAR 100% DO ESPAÇO DISPONÍVEL DA TELA */
+    width: 100%;
+   /* A IMAGEM FICOU VAZANDO DA POKEDEX, ENTÃO UTILIZAREMOS UMA PROPRIEDADE PARA DAR UM LIMITE P QUE A IMAGEM NÃO ULTRAPASSE  */
+   max-width: 425px;
+}
+.pokemon_image{
+    position: absolute;
+    /* POSICIONAR AS IMAGENS NO CENTRO DA TELA*/
+    bottom: 55%;
+    left: 50%;
+    /* TRAZER A IMAGEM DO POKEMIN P MEIO (PUXOU P/ ESQUERDA) */
+    transform: translate(-63%,20%);
+    /* ALTURA FIXA P AS IMAGENS DOS POKEMONS (QUANDO DIMINUI A TELA O TAMANHO DO POKEMON ACOMPANHA) */
+    height: 18%;
+}
+/* ESTILIZAÇÃO DO NOME */
+.pokemon_data{
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    /* POSICIONAR O H1 NO DISPLAY (NO MEIO DO CARD)*/
+    top: 52.5%;
+    right: 27%;
+    /* FAZER COM QUE O TEXTO DIMINUA TAMBÉM QUANDO A TELA FOR */
+    /* AQUI TEMOS UM VALOR PADRÃO, MIN E MÁX P/ QUANDO A TELA FOR REDUZIDA */
+    font-size: clamp(10px,20vw,35px);
+}
+.pokemon_name{
+    color: #3a444d;
+    /* DEIXAR A PRIMEIRA LETRA DO H1 MAIÚSCULA */
+    text-transform: capitalize;
+}
+.form{
+    position: absolute; 
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+.input_search{
+    /* OCUPAR 100% DA ÁREA QUE DEFINIMOS */
+    width: 100%;
+    /* QUANDO A TELA DIMINUI ELE ACOMPANHA O TAMANHO DA TELA */
+    padding: 4%;
+    /* RETIRAR A LINHA EM VOLTA DO INPUT */
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5%;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(2px,5vw,1rem);
+    /* SOMBRA DENTRO DA SOMBRA */
+    box-shadow:  -3px 4px 10px #888, -5px 7px 0 #333;
+}
+
+.buttons{
+    position: absolute;
+    /* TROUXE O BOTÃO PARA BAIXO */
+    bottom: 10%;
+    /* AFASTOU OS BOTÕES DA ESQUERDA E TROUXE PARA A DIREITA */
+    left: 50%;
+    width: 65%;
+    /* DEIXOU UM BOTÃO DO LADO DO OUTRO */
+    display: flex;
+    /* AFASTOU UM POUCO OS BOTÕES */
+    gap: 20px;
+    transform: translate(-57%, 0);
+}
+/* ESTILIZAÇÃO DOS BOTÕES */
+.button{
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: clamp(8px,5vh, 1rem);
+    font-weight: 600;
+    color: #fff;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4 6px 0 #000;
+}
+button:active{
+    /* EFEITO DO BOTÃO ENTRANDO  */
+    box-shadow: inset -4px 4px 0 #222;
+    
+}
